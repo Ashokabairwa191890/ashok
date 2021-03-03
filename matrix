@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+void read_matrix(int m,int n)
+{
+int i,j;
+int a[10][10];
+for(i=1;i<=m;i++)
+{
+for(j=1;j<=n;j++)
+{
+cout << "enter elements of matrix:";
+cin >> a[i][j];
+}
+}
+}
+void display_matrix(int m,int n)
+{
+int i,j;
+int a[10][10];
+cout<<"the matrix is:"<<"\n";
+for(i=1;i<=m;i++)
+{
+for(j=1;j<=n;j++)
+{
+cout << a[i][j]<<"\t";
+}
+cout << endl;
+}
+}
+int main()
+{
+int x,y;
+cout<<"enter x";
+cin>>x;
+cout<<"enter y";
+cin>>y;
+read_matrix(x,y);
+display_matrix(x,y);
+}
