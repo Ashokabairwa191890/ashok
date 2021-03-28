@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class account
+{
+	public:
+		string name;
+		int ac,w,d,b,i;
+		void input()
+		{
+			cout<<"enter name: ";  cin>>name;
+			cout<<"account number: ";  cin>>ac;
+			cout<<"balance is: "; cin>>b;
+			cout<<"deposit: ";  cin>>d;
+			cout<<"withdraw: ";  cin>>w;
+		};
+		void display()
+		{
+			if(w==0)
+			{
+				b=b+d;
+			cout<<"balance is: "<<b;
+			}
+			else if(d==0)
+			{
+				b=b-w;
+			cout<<"balance is: "<<b;
+			}
+			else if(b!=0||w!=0)
+			{
+				b=b+d-w;
+				cout<<"balance is: "<<b;
+			}
+			cout<<endl;
+			if(b<500)
+			{
+				cout<<"Balance is insufficient.";
+			}
+		};
+};
+int main()
+{
+	account a1;
+	a1.input();
+	a1.display();
+}
