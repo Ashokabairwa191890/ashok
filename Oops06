@@ -1,0 +1,38 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+class time
+{
+	public:
+		int HH;
+		int MM;
+		int SS;
+	void insert(int h,int m,int s)
+	{
+		HH=h;
+		MM=m;
+		SS=s;
+	}
+	void print()
+	{
+		cout<<"Time is: "<<HH<<":"<<MM<<":"<<SS<<endl;
+	}
+	friend addtime(int o1,int o2);
+};
+int addtime(time o1,time o2)
+{
+	int a1,a2,a3;
+	a1=o1.HH+o2.HH;
+	a2=o1.MM+o2.MM;
+	a3=o1.SS+o2.SS;
+	cout<<"Add of time is: "<<a1<<":"<<a2<<":"<<a3;
+}
+int main()
+{
+	time t1,t2;
+	t1.insert(10,12,50);
+	t2.insert(12,45,30);
+	t1.print();
+	t2.print();
+	addtime(t1,t2);
+}
